@@ -1,37 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace _26._03._2023
+namespace _04._04._2023
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double[] money = new double[7];
-            double s = 0;
-            for(int i = 0;i<7;i++)
+            Console.WriteLine("kolko produkta shte vavedesh");
+            int n = int.Parse(Console.ReadLine());
+            List <string> producti = new List <string>  ();
+            for(int i =0;i<=n;i++)
             {
-                Console.WriteLine("vavedi kolko pari sa vnesli klientite");
-                money[i] = double.Parse(Console.ReadLine());
+                Console.WriteLine("vavedi product"); 
+                List<string> product = Console.ReadLine().Split(' ').ToList();
             }
-            for(int i =0;i<7;i++)
-            {
-                Console.WriteLine(money[i]);
-            }
-            Console.WriteLine("sumata e {0:c2} " , s );
-            double max = double.MinValue;
-            for(int i =0;i<7;i++)
-                if(max<money[i])
-                {
-                    max = money[i];
-                }
-            Console.WriteLine("maksimalnata stoynost e " + max);
-            double min = double.MaxValue;
-            for(int i =0;i<7;i++)
-                if(min>money[i])
-                {
-                    min = money[i];
-                }
-            Console.WriteLine("minimalnata stoynost e " + min );
+            Console.Write(producti);
+            
         }
     }
 }
